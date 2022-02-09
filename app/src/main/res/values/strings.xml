@@ -3,4 +3,6 @@
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="unima_buildings">Unima Campus Buildings</string>
+    <string name="change_map_layer">Change Map Layer</string>
 </resources>

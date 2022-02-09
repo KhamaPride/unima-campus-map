@@ -2,12 +2,16 @@ package tech.nextgen.unimacampusmap;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+
 import com.esri.arcgisruntime.ArcGISRuntimeEnvironment;
 import com.esri.arcgisruntime.mapping.ArcGISMap;
 import com.esri.arcgisruntime.mapping.BasemapStyle;
 import com.esri.arcgisruntime.mapping.Viewpoint;
 import com.esri.arcgisruntime.mapping.view.MapView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        FloatingActionButton layerBtn =  findViewById(R.id.layerBtn);
+        layerBtn.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, LookAround.class)));
         /*
         authentication with API key required to access basemap services
         and other location services
@@ -29,11 +35,11 @@ public class MainActivity extends AppCompatActivity {
         mMapView = findViewById(R.id.mapView);
 
         //create a map with topographic basemap
-        ArcGISMap map = new ArcGISMap(BasemapStyle.ARCGIS_TOPOGRAPHIC);
+        ArcGISMap map = new ArcGISMap(BasemapStyle.OSM_STREETS);
 
         //set the map to be displayed in this view
         mMapView.setMap(map);
-        mMapView.setViewpoint(new Viewpoint( -15.3920597,35.3399277,10000));
+        mMapView.setViewpoint(new Viewpoint( -15.3892, 35.3372,7500));
     }
     @Override
     protected void onPause(){

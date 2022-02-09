@@ -13,4 +13,17 @@
         >
 
     </com.esri.arcgisruntime.mapping.view.MapView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/layerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/mapView"
+        android:layout_alignBottom="@id/mapView"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/change_map_layer"
+        android:src="@drawable/ic_layers">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 </RelativeLayout>
