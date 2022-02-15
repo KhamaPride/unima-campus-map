@@ -1,27 +1,38 @@
 package tech.nextgen.unimacampusmap;
 
+import static android.os.Build.VERSION_CODES.S;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Spinner;
 
 import com.esri.arcgisruntime.ArcGISRuntimeEnvironment;
 import com.esri.arcgisruntime.mapping.ArcGISMap;
 import com.esri.arcgisruntime.mapping.BasemapStyle;
 import com.esri.arcgisruntime.mapping.Viewpoint;
+import com.esri.arcgisruntime.mapping.view.LocationDisplay;
 import com.esri.arcgisruntime.mapping.view.MapView;
 
 public class MainActivity extends AppCompatActivity {
 
     private MapView mMapView;
-    
+    private LocationDisplay mLocationDisplay;
+    private Spinner mSpinner;
+
+    private final int requestCode = 2;
+    private final String[] reqPermissions = {Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.nav_activity_main);
 
         /*
         authentication with API key required to access basemap services
@@ -37,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         //set the map to be displayed in this view
         mMapView.setMap(map);
-        mMapView.setViewpoint(new Viewpoint( -15.3860467,35.3359535,5000));
+        mMapView.setViewpoint(new Viewpoint( -15.3897, 35.3370,7000));
     }
     @Override
     protected void onPause(){

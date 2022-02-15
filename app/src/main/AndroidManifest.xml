@@ -17,6 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UnimaCampusMap">
         <activity
+            android:name=".DrawerActivity"
+            android:exported="true"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/Theme.UnimaCampusMap.NoActionBar" />
+
+        <activity
             android:name=".OnBoarding"
             android:exported="true" />
         <activity
@@ -28,6 +34,7 @@
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.SEARCH" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

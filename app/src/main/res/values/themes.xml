@@ -13,16 +13,19 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="Theme.UnimaCampusMap.Fullscreen" parent="Theme.UnimaCampusMap">
-        <item name="android:actionBarStyle">
-            @style/Widget.Theme.UnimaCampusMap.ActionBar.Fullscreen
-        </item>
-        <item name="android:windowActionBarOverlay">true</item>
-        <item name="android:windowBackground">@null</item>
-    </style>
 
     <style name="ThemeOverlay.UnimaInteractiveCampusMap.FullscreenContainer" parent="Theme.UnimaCampusMap">
         <item name="fullscreenBackgroundColor">@color/white</item>
         <item name="fullscreenTextColor">@color/light_blue_A200</item>
     </style>
+
+    <style name="Theme.UnimaCampusMap.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.UnimaCampusMap.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.UnimaCampusMap.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

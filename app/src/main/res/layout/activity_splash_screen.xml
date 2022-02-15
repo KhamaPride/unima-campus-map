@@ -18,7 +18,6 @@
         android:gravity="center"
         android:keepScreenOn="true"
         android:src="@drawable/app_logo"
-        android:text="@string/dummy_content"
         android:textColor="?attr/fullscreenTextColor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

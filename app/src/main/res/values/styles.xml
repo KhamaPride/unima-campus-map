@@ -1,10 +1,8 @@
 <resources>
-    <style name="Widget.Theme.UnimaCampusMap.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/black_overlay</item>
-    </style>
+<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
 
-    <style name="Widget.Theme.UnimaCampusMap.ButtonBar.Fullscreen" parent="">
-        <item name="android:background">@color/black_overlay</item>
-        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
-    </style>
+</style>
+
+    <color name="colorPrimary">#356E9C</color>
 </resources>

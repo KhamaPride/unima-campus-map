@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/mapMenu"
+            android:title="@string/map"
+            android:icon="@drawable/ic_baseline_map_24"/>
+        <item android:id="@+id/myPlacesMenu"
+            android:title="@string/my_places"
+            android:icon="@drawable/ic_baseline_my_location_24" />
+        <item android:id="@+id/lookAroundMenu"
+            android:title="@string/look_around"
+            android:icon="@drawable/ic_baseline_remove_red_eye_24"/>
+        <item android:id="@+id/arNavMenu"
+            android:title="@string/ar_navigation_guide"
+            android:icon="@drawable/ic_baseline_navigation_24" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:title="Communicate">
+        <item android:id="@+id/settingsMenu"
+            android:title="@string/settings"
+            android:icon="@drawable/ic_baseline_settings_24" />
+        <item android:id="@+id/helpMenu"
+            android:title="@string/help"
+            android:icon="@drawable/ic_baseline_help_outline_24"/>
+        <item android:id="@+id/sendFdbkMenu"
+            android:title="@string/send_feedback"
+            android:icon="@drawable/feedback" />
+    </group>
+
+</menu>
